@@ -7,7 +7,7 @@ node {
   stage('Create Docker Image') {
     echo "Entering docker image stage..."	
 
-      bat 'docker build -t mysampleimage:${env.BUILD_NUMBER} .'
+      bat 'docker build -t mysampleimage .'
 
 
   }
@@ -15,7 +15,7 @@ node {
   stage ('Run Application') {
       echo "entering app running stage..."
     
-      bat 'docker run -i -t mysampleimage:${env.BUILD_NUMBER}'
+      bat 'docker run -i -t mysampleimage'
 }
 
 
