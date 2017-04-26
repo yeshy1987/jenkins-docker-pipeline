@@ -18,7 +18,7 @@ node {
   stage ('Run Application') {
       echo "entering app running stage..."
     
-      cmd "docker run -i -t mysampleimage:${env.BUILD_NUMBER}"
+      sh "docker run -i -t mysampleimage:${env.BUILD_NUMBER}"
 }
 
 
