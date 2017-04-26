@@ -7,7 +7,7 @@ node {
   stage('Create Docker Image') {
     echo "Entering docker image stage..."	
 
-      bat 'docker.build("mysampleimage:${env.BUILD_NUMBER} - < Dockerfile")'
+      docker.build("mysampleimage:${env.BUILD_NUMBER} - < Dockerfile")
 
 
   }
