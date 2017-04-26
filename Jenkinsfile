@@ -6,7 +6,7 @@ node {
 
   stage('Create Docker Image') {
     echo "Entering docker image stage..."	
-     bat "image = docker.build ("yeshy1987/jenkins-docker-pipeline:${env.BUILD_NUMBER}")"
+     bat image = "docker.build ("yeshy1987/jenkins-docker-pipeline:${env.BUILD_NUMBER}")"
       //bat 'docker build -t mysampleimage .'
 
 
