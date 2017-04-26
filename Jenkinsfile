@@ -12,13 +12,14 @@ node {
 
   }
   stage ('Push Image to registry') {
-    docker.withRegistry ('https://index.docker.io/v1/')	
+    bat "docker.withRegistry ('https://index.docker.io/v1/')"
+    image.push()
 }
 
   stage ('Run Application') {
-      //echo "entering app running stage..."
-      //bat '	sampleapp = Image.run("-p 8081:8081")'
-      bat "docker run -t -d -p 8081:8081 mysampleimage:latest"
+      echo "entering app running stage..."
+      bat "sampleapp = image.run("-p 8081:8081")"
+      //bat "docker run -t -d -p 8081:8081 mysampleimage:latest"
 }
 
 
