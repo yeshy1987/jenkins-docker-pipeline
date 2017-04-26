@@ -1,3 +1,1 @@
-FROM java
-
-RUN java -version
+FROM yeshy1987/myfirstnodejsapp
