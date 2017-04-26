@@ -7,7 +7,7 @@ node {
   stage('Create Docker Image') {
     echo "Entering docker image stage..."	
 
-    dir('jenkins-docker-pipeline') {
+    dir('jenkins-docker-pipeline/workspace') {
 
       docker.build("docker build - < Dockerfile")
 
