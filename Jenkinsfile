@@ -15,7 +15,7 @@ node {
   stage ('Run Application') {
       echo "entering app running stage..."
     
-      bat 'docker run -i -t -p 8081:8081 mysampleimage:latest'
+      bat 'docker run -t -p 8081:8081 mysampleimage:latest'
 }
 
 
